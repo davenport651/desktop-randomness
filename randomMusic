@@ -3,12 +3,12 @@
 #All files should have file names without spaces until further notice -mwd
 
 dir='/home/$USER/Music'
-file=$(find $dir -iname *.mp3 | sort --random-sort | head -1)
+file=$(find $dir -iname '*.mp3' -o -iname '*.ogg' -o -iname '.adx' | sort --random-sort | head -1)
 
 echo "The randomly-selected file is: $file"  # Echo full file path for debugging
 
 
 #echo $file
 echo " "
-#cvlc --play-and-exit $file  #plays the selected file
+#cvlc --play-and-exit "$file"  #plays the selected file
 gnome-mplayer -q "$file"
