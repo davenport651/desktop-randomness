@@ -1,0 +1,14 @@
+#!/bin/bash
+#This script will play a random file from the $dir root
+#All files should have file names without spaces until further notice -mwd
+
+dir='/home/$USER/Music'
+file=$(find $dir -iname *.mp3 | sort --random-sort | head -1)
+
+echo "The randomly-selected file is: $file"  # Echo full file path for debugging
+
+
+#echo $file
+echo " "
+#cvlc --play-and-exit $file  #plays the selected file
+gnome-mplayer -q "$file"
