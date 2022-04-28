@@ -1,0 +1,10 @@
+Loosely inspired by the Pirate Cinema web collage: http://thepiratecinema.com/online/
+
+Install VLC, fill the $HOME/Videos directory with files (or change the path to a network stream), then add the following to your .xscreensaver file for more randomness.
+
+-              "Pirate Cinema"  cvlc --loop -Z --fullscreen                   \
+                                  --ignore-config --video-filter ""           \
+                                  --no-interact --no-disable-screensaver      \
+                                  --drawable-xid $XSCREENSAVER_WINDOW         \
+                                  --no-audio "$HOME/Videos"      \n\
+
